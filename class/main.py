@@ -2,7 +2,7 @@ from datetime import datetime
 
 class Funcionarios:
     def __init__(self, nome, sobrenome, ano_nascimento):
-        self.nome = nome
+        self.nome = ''
         self.sobrenome = sobrenome
         self.ano_nascimento = ano_nascimento
 
@@ -13,11 +13,19 @@ class Funcionarios:
         ano_atual = datetime.now().year
         self.ano_nascimento = int(ano_atual - self.ano_nascimento)
         return self.ano_nascimento
+    def cadastra(self):
+        self.nome = input('digite seu nome: ')
+        self.sobrenome= input('digite seu sobrenome: ')
+        self.ano_nascimento = input('qual sua data de nascimento: ')
 
+Funcionarios.cadastra()
 
-usuario1 = Funcionarios('Silvia', 'Cabral', 2009)
+usuario1 = Funcionarios(nome,sobrenome,ano_nascimento)
 usuario2 = Funcionarios('Elena', 'Borges', 2000)
 usuario3 = Funcionarios('Elizangela', 'Santos', 2021)
+
+
+
 
 
 
